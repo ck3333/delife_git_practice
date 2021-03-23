@@ -27,13 +27,17 @@ body {
   padding: 40px 0;
   background: #230A59;
 }
-.footer-logo {
-  display: flex;
-  justify-content: flex-end;
-  color: #fff;
-  font-weight: bold;
-}
 
+.footer-list {
+  display: flex;
+  justify-content: center;
+}
+.footer-item:not(:last-child) {
+  margin-right: 1em;
+}
+.footer-item >a {
+  color: #fff;
+}
 
 /* 共通パーツ */
 .inner {
