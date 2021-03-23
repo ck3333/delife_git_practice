@@ -70,6 +70,10 @@ body {
   left: 50%;
   -webkit-transform : translate(-50%,-50%);
   transform: translate(-50%, -50%);
+  transition: .4s;
+}
+.fv-copy.is-scale {
+  transform: translate(-50%, -50%) scale(1.4);
 }
 
 .about {
