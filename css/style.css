@@ -1,7 +1,9 @@
 /* base */
+
 body {
   color: #333;
-  font-family: "ヒラギノ角ゴシック", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", "Yu Gothic", YuGothic, "メイリオ", Meiryo, '源ノ角ゴシック JP', sans-serif;;
+  font-family: "ヒラギノ角ゴシック", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", "Yu Gothic", YuGothic, "メイリオ", Meiryo, '源ノ角ゴシック JP', sans-serif;
+  ;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.67;
@@ -11,8 +13,8 @@ body {
   overflow-x: hidden;
 }
 
-
 /* layout */
+
 .header {
   height: 120px;
   background: #5C73F2;
@@ -27,37 +29,52 @@ body {
   padding: 40px 0;
   background: #230A59;
 }
-.footer-logo {
+
+.footer-list {
   display: flex;
-  justify-content: flex-end;
-  color: #fff;
-  font-weight: bold;
+  justify-content: center;
 }
 
+.footer-item:not(:last-child) {
+  margin-right: 1em;
+}
+
+.footer-item>a {
+  color: #fff;
+}
 
 /* 共通パーツ */
+
 .inner {
   display: block;
   box-sizing: content-box;
-  max-width: 900px;/* コンテナ幅は900px。box-sizing: border-box の時はコンテナサイズに左右の余白用の80pxをプラス */
-  margin: 0 auto;/* 中央に */
-  padding-left: 40px;/* 左の余白（PC時のレスポンシブ対応用） */
-  padding-right: 40px;/* 右の余白（PC時のレスポンシブ対応用） */
+  max-width: 900px;
+  /* コンテナ幅は900px。box-sizing: border-box の時はコンテナサイズに左右の余白用の80pxをプラス */
+  margin: 0 auto;
+  /* 中央に */
+  padding-left: 40px;
+  /* 左の余白（PC時のレスポンシブ対応用） */
+  padding-right: 40px;
+  /* 右の余白（PC時のレスポンシブ対応用） */
 }
 
-
 /* 各セクション */
+
 .fv {
   display: block;
   height: 700px;
   background-color: transparent;
   background-image: url(../img/fv_bg.jpg);
   background-repeat: no-repeat;
-  background-position: center bottom;/* 50% 100% でもOK。X軸:中央、Y軸:底 */
-  background-size: 100% auto;/* contain でもOK */
+  background-position: center bottom;
+  /* 50% 100% でもOK。X軸:中央、Y軸:底 */
+  background-size: 100% auto;
+  /* contain でもOK */
   /* background: transparent url(../img/fv_bg.jpg) no-repeat center bottom / 100% auto; */
-  position: relative;/* 親要素に relative */
+  position: relative;
+  /* 親要素に relative */
 }
+
 .fv-copy {
   width: 100%;
   color: #230A59;
@@ -65,13 +82,15 @@ body {
   font-weight: bold;
   letter-spacing: 0.1em;
   text-align: center;
-  position: absolute;/* 子要素に absolute */
+  position: absolute;
+  /* 子要素に absolute */
   top: 50%;
   left: 50%;
-  -webkit-transform : translate(-50%,-50%);
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   transition: .4s;
 }
+
 .fv-copy.is-scale {
   transform: translate(-50%, -50%) scale(1.4);
 }
@@ -79,21 +98,28 @@ body {
 .about {
   padding: 120px 0;
 }
+
 .about-box {
   display: flex;
   justify-content: space-between;
 }
+
 .about-picture {
   display: block;
-  width: 44.4%;/* 400pxにしたい。[実現したい幅（400px）] / [親要素の幅（900px）] */
+  width: 44.4%;
+  /* 400pxにしたい。[実現したい幅（400px）] / [親要素の幅（900px）] */
 }
-.about-picture >img {
+
+.about-picture>img {
   width: 100%;
 }
+
 .about-body {
   display: block;
-  width: 50%;/* 450pxにしたい。[実現したい幅（450px）] / [親要素の幅（900px）]  */
+  width: 50%;
+  /* 450pxにしたい。[実現したい幅（450px）] / [親要素の幅（900px）]  */
 }
+
 .about-title {
   font-size: 28px;
   font-weight: bold;
@@ -104,6 +130,7 @@ body {
 .benefit {
   padding: 0 0 120px;
 }
+
 .benefit-title {
   font-size: 28px;
   font-weight: bold;
@@ -111,13 +138,18 @@ body {
   margin-bottom: 28px;
   text-align: center;
 }
+
 .benefit-list {
   display: flex;
   justify-content: space-between;
 }
+
 .benefit-item {
-  width: calc(33.33% - 40px * 2 / 3);/* (100 ÷ [要素数])% - [余白の大きさ] * [余白の数] ÷ [要素の数] */
+  width: calc(33.33% - 40px * 2 / 3);
+  /* (100 ÷ [要素数])% - [余白の大きさ] * [余白の数] ÷ [要素の数] */
 }
-.benefit-item >img {
+
+.benefit-item>img {
   width: 100%;
 }
+
